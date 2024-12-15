@@ -1,67 +1,116 @@
 {
   "interactionModel": {
-    "languageModel": {
-      "intents": [
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "slots": [],
-          "name": "HelloWorldIntent",
-          "samples": [
-            "olá",
-            "como vai você",
-            "diga oi mundo",
-            "diga oi",
-            "oi",
-            "diga olá mundo",
-            "diga olá"
-          ]
-        },
-        {
-          "name": "AMAZON.NavigateHomeIntent",
-          "samples": []
-        },
-        {
-          "slots": [],
-          "name": "Filmeintent",
-          "samples": [
-            "recomenda um filme",
-            "filmes em cartaz",
-            "filmes em alta",
-            "melhores filmes atualmente",
-            "melhores filmes"
-          ]
-        },
-        {
-          "name": "AMAZON.YesIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.NoIntent",
-          "samples": []
-        },
-        {
-          "slots": [],
-          "name": "Salvosintent",
-          "samples": [
-            "assistir depois",
-            "assistir mais tarde",
-            "filmes salvos"
-          ]
-        }
-      ],
-      "types": [],
-      "invocationName": "filmes atuais"
-    }
+      "languageModel": {
+          "invocationName": "filmes atuais",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": [
+                      "ajuda"
+                  ]
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": [
+                      "sair"
+                  ]
+              },
+              {
+                  "name": "HelloWorldIntent",
+                  "slots": [],
+                  "samples": [
+                      "olá",
+                      "como vai você",
+                      "diga oi mundo",
+                      "diga oi",
+                      "oi",
+                      "diga olá mundo",
+                      "diga olá"
+                  ]
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "Filmeintent",
+                  "slots": [],
+                  "samples": [
+                      "recomende filmes",
+                      "filmes em alta",
+                      "melhores filmes atualmente",
+                      "melhores filmes"
+                  ]
+              },
+              {
+                  "name": "DetalhesFilmeIntent",
+                  "slots": [
+                      {
+                          "name": "filme",
+                          "type": "AMAZON.Movie"
+                      }
+                  ],
+                  "samples": [
+                      "{filme}",
+                      "qual é o resumo do filme {filme}",
+                      "quais os detalhes de {filme}",
+                      "me fale sobre o filme {filme}",
+                      "informações sobre {filme}"
+                  ]
+              },
+              {
+                  "name": "SalvarFilmeIntent",
+                  "slots": [
+                      {
+                          "name": "filme",
+                          "type": "AMAZON.Movie"
+                      }
+                  ],
+                  "samples": [
+                      "salvar o filme {filme}",
+                      "adicionar {filme} aos favoritos",
+                      "salvar {filme}"
+                  ]
+              },
+              {
+                  "name": "RemoverFilmeIntent",
+                  "slots": [
+                      {
+                          "name": "filme",
+                          "type": "AMAZON.Movie"
+                      }
+                  ],
+                  "samples": [
+                      "excluir {filme}",
+                      "remover {filme}",
+                      "remover {filme} da lista",
+                      "apagar o filme {filme}",
+                      "delete {filme}"
+                  ]
+              },
+              {
+                  "name": "FilmesSalvosIntent",
+                  "slots": [],
+                  "samples": [
+                      "filmes salvos",
+                      "quais filmes eu salvei",
+                      "meus filmes favoritos"
+                  ]
+              },
+              {
+                  "name": "AMAZON.YesIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NoIntent",
+                  "samples": []
+              }
+          ],
+          "types": []
+      }
   }
 }
